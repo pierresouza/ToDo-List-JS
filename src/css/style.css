@@ -1,1 +1,95 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+input {
+  background: none;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+div.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.container div.main-container {
+  border: 2px solid green;
+}
+
+div.container div.main-container div.header-container {
+  background-color: cyan;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80vw;
+}
+
+div.container div.main-container div.header-container div#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.container div.main-container div.header-container div#logo img {
+  padding-right: 16px;
+}
+
+div.container div.main-container div.header-container div#logo h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+div.container div.main-container div.header-container div#filter-container ul {
+  list-style-type: none;
+}
+
+div.container div.List {
+  color: #3d82eb;
+  border: 2px solid red;
+  height: auto;
+}
+
+div.container div.List input::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.List input:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.List input::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.List input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #3d82eb;
+}
+/*# sourceMappingURL=style.css.map */
