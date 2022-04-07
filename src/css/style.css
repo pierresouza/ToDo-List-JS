@@ -6,7 +6,6 @@
           box-sizing: border-box;
 }
 
-*,
 input {
   background: none;
   border: 0;
@@ -74,8 +73,6 @@ div.container div.main-container div.header-container div#filter-container selec
 }
 
 div.container div.nav {
-  color: #3d82eb;
-  border: 2px solid red;
   height: auto;
 }
 
