@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+button:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+input {
+  background: none;
+  border: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background: cyan;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+div.container div.main-container div.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+  width: 80vw;
+}
+
+div.container div.main-container div.header-container div#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.container div.main-container div.header-container div#logo img {
+  padding-right: 16px;
+}
+
+div.container div.main-container div.header-container div#logo h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+div.container div.main-container div.header-container div#filter-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+div.container div.list {
+  margin-top: 16px;
+  height: auto;
+  padding: 24px;
+}
+
+div.container div.list div#input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+}
+
+div.container div.list div#input-container input {
+  font-family: "Roboto", sans-serif;
+  padding-left: 16px;
+}
+
+div.container div.list div#input-container input::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.list div#input-container input:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.list div#input-container input::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.list div#input-container input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d82eb;
+}
+
+div.container div.list .todo__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 5px #000;
+          box-shadow: 1px 1px 5px #000;
+}
+
+div.container div.list .todo__item > div {
+  padding-left: 8px;
+  width: 80%;
+}
+
+div.container div.list .todo__item:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #000;
+  color: #ffff00;
+}
+
+div.container div.list .todo__item > input[type="text"] {
+  border: none;
+  width: 80%;
+  font: inherit;
+}
+
+div.container div.list .todo__item > input[type="button"],
+div.container div.list .todo__item > input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  font: inherit;
+}
+
+div.container div.list .todo__item > input[type="radio"]:checked + div {
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=style.css.map */

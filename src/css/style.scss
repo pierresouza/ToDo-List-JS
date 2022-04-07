@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(0.8);
+  }
+}
+
+input {
+  background: none;
+  border: 0;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background: cyan;
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  div.main-container {
+    div.header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      width: 80vw;
+
+      div#logo {
+        display: flex;
+
+        img {
+          padding-right: 16px;
+        }
+
+        h1 {
+          font-family: "Roboto", sans-serif;
+          font-weight: 700;
+          font-size: 32px;
+        }
+      }
+
+      div#filter-container {
+        select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+      }
+    }
+  }
+
+  div.list {
+    margin-top: 16px;
+    height: auto;
+    padding: 24px;
+    div#input-container {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+
+      input {
+        font-family: "Roboto", sans-serif;
+        padding-left: 16px;
+
+        &::placeholder {
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          color: #3d82eb;
+        }
+      }
+    }
+    .todo__item {
+      display: flex;
+      width: 100%;
+      height: 60px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      box-shadow: 1px 1px 5px #000;
+    }
+    .todo__item > div {
+      padding-left: 8px;
+      width: 80%;
+    }
+    .todo__item:hover {
+      cursor: pointer;
+      transition: all 0.5s ease;
+      background-color: #000;
+      color: #ffff00;
+    }
+
+    .todo__item > input[type="text"] {
+      border: none;
+      width: 80%;
+      font: inherit;
+    }
+
+    .todo__item > input[type="button"],
+    .todo__item > input[type="radio"] {
+      width: 20px;
+      height: 20px;
+      font: inherit;
+    }
+
+    .todo__item > input[type="radio"]:checked + div {
+      text-decoration: line-through;
+    }
+  }
+}
