@@ -22,20 +22,21 @@
             <h1>Today</h1>
           </div>
           <div id="filter-container">
-            <select>
-              <option id="points">. . .</option>
+            <select id="funcao">
+              <option></option>
               <option>Completed</option>
               <option>In Progress</option>
               <option>Removed</option>
             </select>
           </div>
         </div>
-        <div class="list" id="todoList">
+        <div class="list">
           <div id="input-container">
-            <h1>Lista de tarefas</h1>
-            <input type="text" name="" id="" />
-            <ul></ul>
-            <button></button>
+            <button onclick="adicionar()">
+              <img src="assets/plus.svg" alt="" />
+            </button>
+            <input type="text" id="texto" placeholder="Create New Item" />
+            <li id="lista"></li>
           </div>
         </div>
       </div>
