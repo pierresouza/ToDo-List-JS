@@ -25,8 +25,7 @@ button {
 }
 
 button:hover {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  background-color: #EB3D3D;
 }
 
 input {
@@ -87,6 +86,53 @@ div.container div.list {
   height: auto;
   margin-top: 16px;
   padding: 24px;
+}
+
+div.container div.list .list {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+div.container div.list .task {
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 1rem 3rem;
+}
+
+div.container div.list .check-button {
+  background-color: #4E4E4E;
+  border: none;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+div.container div.list .delete-button {
+  background-color: #EB3D3D;
+  border: none;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+div.container div.list .task.done .check-button {
+  background-color: #46494c;
+  color: #f6f1d1;
+}
+
+div.container div.list .content {
+  margin: 0;
 }
 
 div.container div.list div#input-container {

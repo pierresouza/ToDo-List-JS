@@ -18,8 +18,9 @@ button {
   border: 0;
   background: none;
   transition: all 0.5s;
+
   &:hover {
-    transform: scale(0.8);
+background-color: #EB3D3D;
   }
 }
 
@@ -72,6 +73,46 @@ div.container {
     height: auto;
     margin-top: 16px;
     padding: 24px;
+
+    .list {
+      padding: 0;
+      list-style: none;
+      width: 100%;
+    }
+    .task {
+      color: #000000;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      padding: 1rem 3rem;
+    }
+    .check-button {
+      background-color: #4E4E4E;
+      border: none;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      outline: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .delete-button {
+      background-color: #EB3D3D;
+      border: none;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      outline: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .task.done .check-button {
+      background-color: #46494c;
+      color: #f6f1d1;
+    }
+    .content {
+      margin: 0;
+    }
+
+    /// coment
 
     div#input-container {
       display: flex;
