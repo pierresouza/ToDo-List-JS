@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
     <title>To Do List</title>
   </head>
   <body>
@@ -31,11 +31,13 @@
           </div>
         </div>
         <div class="list" id="todoList">
-          <div id="input-container">
-            <ul id="data-lista"></ul>
-            <button id="data-button">a</button>
-            <input id="data-input" type="text" placeholder="Create New Item" />
-          </div>
+          <form id="data-input" action="">
+            <input id="data-input" type="text" data-input />
+            <button id="data-button" data-button>Create New Item</button>
+          </form>
+          <ul id="data-lista">
+
+          </ul>
         </div>
       </div>
     </div>

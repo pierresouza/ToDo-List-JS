@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  border: 2px solid green;
+}
+
 button {
   cursor: pointer;
   border: 0;
@@ -20,14 +28,8 @@ input {
   border: 0;
 }
 
-body {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  padding: 32px;
-}
-
 div.container {
+  border: 2px solid rgb(128, 0, 0);
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -52,6 +54,7 @@ div.container {
           font-family: "Roboto", sans-serif;
           font-weight: 700;
           font-size: 32px;
+          border: 2px solid rgb(0, 17, 255);
         }
       }
 
@@ -65,9 +68,11 @@ div.container {
   }
 
   div.list {
-    margin-top: 16px;
+    border: 2px solid rgb(0, 195, 255);
     height: auto;
+    margin-top: 16px;
     padding: 24px;
+
     div#input-container {
       display: flex;
       align-items: center;
@@ -78,26 +83,28 @@ div.container {
         padding-left: 16px;
 
         &::placeholder {
-          font-family: "Roboto", sans-serif;
           font-size: 16px;
           font-weight: 400;
+          font-family: "Roboto", sans-serif;
           color: #3d82eb;
         }
       }
     }
     .todo__item {
       display: flex;
-      width: 100%;
-      height: 60px;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
+      height: 60px;
       padding: 5px;
       box-shadow: 1px 1px 5px #000;
     }
+
     .todo__item > div {
       padding-left: 8px;
       width: 80%;
     }
+
     .todo__item:hover {
       cursor: pointer;
       transition: all 0.5s ease;
