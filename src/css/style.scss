@@ -2,39 +2,35 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  border: 2px solid green;
+  padding: 30px;
 }
 
 button {
   cursor: pointer;
   border: 0;
   background: none;
-  transition: all 0.5s;
-
-  &:hover {
-    background-color: #eb3d3d;
-  }
 }
 
 input {
+  height: 50px;
+  width: 90%;
   background: none;
   border: 0;
 }
 
 div.container {
-  border: 2px solid rgb(128, 0, 0);
   display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
 
   div.main-container {
     div.header-container {
@@ -42,7 +38,7 @@ div.container {
       align-items: center;
       justify-content: space-between;
       padding: 16px;
-      width: 80vw;
+      width: 90vw;
 
       div#logo {
         display: flex;
@@ -55,7 +51,6 @@ div.container {
           font-family: "Roboto", sans-serif;
           font-weight: 700;
           font-size: 32px;
-          border: 2px solid rgb(0, 17, 255);
         }
       }
 
@@ -65,66 +60,118 @@ div.container {
           -moz-appearance: none;
           border-radius: 5px 5px 0px 0px;
           width: 20px;
-          border: 2px solid yellow;
+        }
+
+        .select-itens {
+          display: flex;
+          align-items: center;
+          background-image: url(../assets/points-input.svg);
+          border: none;
+          background-repeat: no-repeat;
+          width: 26px;
+          height: 16px;
         }
       }
     }
   }
 
   div.list {
-    border: 2px solid rgb(0, 195, 255);
     height: auto;
     margin-top: 16px;
     padding: 24px;
+
+    .form-input {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      margin-left: 30px;
+    }
 
     .list {
       padding: 0;
       list-style: none;
       width: 100%;
     }
+
+    ul.desk-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      transition: all 0.5;
+      box-shadow: #000a;
+
+      p.content {
+        order: 1;
+      }
+
+      .task.done .content {
+        text-decoration: line-through;
+      }
+
+      .click-button {
+        order: 0;
+      }
+
+      div.concluir-btn {
+      }
+
+      .delete-button {
+        order: 2;
+      }
+    }
+
     .task {
-      color: #000000;
+      color: #000;
       display: flex;
       justify-content: space-between;
       margin-bottom: 0.5rem;
       padding: 1rem 3rem;
     }
     .check-button {
-      background-color: #f6f1d1;
+      background-image: url("../assets/Ellipse-1.svg");
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px;
       border: none;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       outline: none;
-      border-radius: 2px;
+      border-radius: 12px;
       cursor: pointer;
     }
 
     .delete-button {
-      background-color: #f6f1d1;
+      background-image: url("../assets/remove.svg");
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px;
       border: none;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       outline: none;
-      border-radius: 2px;
+      border-radius: 12px;
       cursor: pointer;
     }
 
     .task.done .check-button {
-      background-color: #46494c;
-      color: #f6f1d1;
+      background-color: #003162;
     }
     .content {
       margin: 0;
     }
 
-    /// coment
+    .task.done .content {
+      text-decoration: line-through;
+    }
 
     div#input-container {
       display: flex;
       align-items: center;
-      padding: 8px;
+      padding-top: 8px;
+      padding-bottom: 8px;
 
       input {
         font-family: "Roboto", sans-serif;
         padding-left: 16px;
+        margin-left: 10px;
 
         &::placeholder {
           font-size: 16px;
@@ -134,43 +181,11 @@ div.container {
         }
       }
     }
-    .todo__item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 60px;
-      padding: 5px;
-      box-shadow: 1px 1px 5px #000;
-    }
+  }
 
-    .todo__item > div {
-      padding-left: 8px;
-      width: 80%;
-    }
-
-    .todo__item:hover {
-      cursor: pointer;
-      transition: all 0.5s ease;
-      background-color: #000;
-      color: #ffff00;
-    }
-
-    .todo__item > input[type="text"] {
-      border: none;
-      width: 80%;
-      font: inherit;
-    }
-
-    .todo__item > input[type="button"],
-    .todo__item > input[type="radio"] {
-      width: 20px;
-      height: 20px;
-      font: inherit;
-    }
-
-    .todo__item > input[type="radio"]:checked + div {
-      text-decoration: line-through;
-    }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

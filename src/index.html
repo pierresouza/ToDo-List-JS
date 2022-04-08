@@ -22,13 +22,11 @@
             <h1>Today</h1>
           </div>
           <div id="filter-container">
-            <!-- <img src="./assets/points-input.svg" alt="Options"> -->
             <select class="select-itens">
-              <option id="points">
-              </option>
-              <option>Completed</option>
-              <option>In Progress</option>
-              <option>Removed</option>
+              <option class="points"></option>
+              <option class="points">Completed</option>
+              <option class="points">In Progress</option>
+              <option class="points">Removed</option>
             </select>
           </div>
         </div>
@@ -38,9 +36,20 @@
             <button class="new-button" data-button>
               <img src="./assets/plus.svg" alt="Adicionar Tarefa" />
             </button>
-            <input class="input" type="text" data-input placeholder="Create New Item" />
+            <input
+              class="input"
+              type="text"
+              data-input
+              required="true"
+              placeholder="Create New Item"
+            />
           </form>
         </div>
+        <footer class="footer">
+          <a href="https://github.com/GabrielFratelli"
+            >2022, Gabriel Fratelli</a
+          >
+        </footer>
       </div>
     </div>
   </body>

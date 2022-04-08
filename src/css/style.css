@@ -2,47 +2,43 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  border: 2px solid green;
+  padding: 30px;
 }
 
 button {
   cursor: pointer;
   border: 0;
   background: none;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-button:hover {
-  background-color: #eb3d3d;
 }
 
 input {
+  height: 50px;
+  width: 90%;
   background: none;
   border: 0;
 }
 
 div.container {
-  border: 2px solid maroon;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100%;
 }
 
 div.container div.main-container div.header-container {
@@ -56,7 +52,7 @@ div.container div.main-container div.header-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 16px;
-  width: 80vw;
+  width: 90vw;
 }
 
 div.container div.main-container div.header-container div#logo {
@@ -73,7 +69,6 @@ div.container div.main-container div.header-container div#logo h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 32px;
-  border: 2px solid #0011ff;
 }
 
 div.container div.main-container div.header-container div#filter-container .select-itens {
@@ -81,14 +76,39 @@ div.container div.main-container div.header-container div#filter-container .sele
   -moz-appearance: none;
   border-radius: 5px 5px 0px 0px;
   width: 20px;
-  border: 2px solid yellow;
+}
+
+div.container div.main-container div.header-container div#filter-container .select-itens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../assets/points-input.svg);
+  border: none;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 16px;
 }
 
 div.container div.list {
-  border: 2px solid #00c3ff;
   height: auto;
   margin-top: 16px;
   padding: 24px;
+}
+
+div.container div.list .form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.container div.list input {
+  margin-left: 30px;
 }
 
 div.container div.list .list {
@@ -97,8 +117,47 @@ div.container div.list .list {
   width: 100%;
 }
 
+div.container div.list ul.desk-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.5;
+  transition: all 0.5;
+  -webkit-box-shadow: #000a;
+          box-shadow: #000a;
+}
+
+div.container div.list ul.desk-container p.content {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+div.container div.list ul.desk-container .task.done .content {
+  text-decoration: line-through;
+}
+
+div.container div.list ul.desk-container .click-button {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+div.container div.list ul.desk-container .delete-button {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 div.container div.list .task {
-  color: #000000;
+  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,32 +169,37 @@ div.container div.list .task {
 }
 
 div.container div.list .check-button {
-  background-color: #f6f1d1;
+  background-image: url("../assets/Ellipse-1.svg");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
   border: none;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   outline: none;
-  border-radius: 2px;
+  border-radius: 12px;
   cursor: pointer;
 }
 
 div.container div.list .delete-button {
-  background-color: #f6f1d1;
+  background-image: url("../assets/remove.svg");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
   border: none;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   outline: none;
-  border-radius: 2px;
+  border-radius: 12px;
   cursor: pointer;
 }
 
 div.container div.list .task.done .check-button {
-  background-color: #46494c;
-  color: #f6f1d1;
+  background-color: #003162;
 }
 
 div.container div.list .content {
   margin: 0;
+}
+
+div.container div.list .task.done .content {
+  text-decoration: line-through;
 }
 
 div.container div.list div#input-container {
@@ -145,12 +209,14 @@ div.container div.list div#input-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 div.container div.list div#input-container input {
   font-family: "Roboto", sans-serif;
   padding-left: 16px;
+  margin-left: 10px;
 }
 
 div.container div.list div#input-container input::-webkit-input-placeholder {
@@ -181,50 +247,15 @@ div.container div.list div#input-container input::placeholder {
   color: #3d82eb;
 }
 
-div.container div.list .todo__item {
+div.container .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 60px;
-  padding: 5px;
-  -webkit-box-shadow: 1px 1px 5px #000;
-          box-shadow: 1px 1px 5px #000;
-}
-
-div.container div.list .todo__item > div {
-  padding-left: 8px;
-  width: 80%;
-}
-
-div.container div.list .todo__item:hover {
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  background-color: #000;
-  color: #ffff00;
-}
-
-div.container div.list .todo__item > input[type="text"] {
-  border: none;
-  width: 80%;
-  font: inherit;
-}
-
-div.container div.list .todo__item > input[type="button"],
-div.container div.list .todo__item > input[type="radio"] {
-  width: 20px;
-  height: 20px;
-  font: inherit;
-}
-
-div.container div.list .todo__item > input[type="radio"]:checked + div {
-  text-decoration: line-through;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
