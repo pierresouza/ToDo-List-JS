@@ -20,7 +20,7 @@ button {
   transition: all 0.5s;
 
   &:hover {
-background-color: #EB3D3D;
+    background-color: #eb3d3d;
   }
 }
 
@@ -87,7 +87,7 @@ div.container {
       padding: 1rem 3rem;
     }
     .check-button {
-      background-color: #4E4E4E;
+      background-color: #f6f1d1;
       border: none;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       outline: none;
@@ -96,7 +96,7 @@ div.container {
     }
 
     .delete-button {
-      background-color: #EB3D3D;
+      background-color: #f6f1d1;
       border: none;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       outline: none;

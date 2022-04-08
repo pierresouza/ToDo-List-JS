@@ -25,7 +25,7 @@ button {
 }
 
 button:hover {
-  background-color: #EB3D3D;
+  background-color: #eb3d3d;
 }
 
 input {
@@ -107,7 +107,7 @@ div.container div.list .task {
 }
 
 div.container div.list .check-button {
-  background-color: #4E4E4E;
+  background-color: #f6f1d1;
   border: none;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -117,7 +117,7 @@ div.container div.list .check-button {
 }
 
 div.container div.list .delete-button {
-  background-color: #EB3D3D;
+  background-color: #f6f1d1;
   border: none;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
