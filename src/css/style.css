@@ -56,12 +56,6 @@ div.container div.main-container div.header-container div#logo h1 {
   font-size: 32px;
 }
 
-div.container div.main-container div#input-container {
-  border: 0 none;
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-}
-
 div.container div.main-container button {
   border: 0 none;
   cursor: pointer;
@@ -69,50 +63,30 @@ div.container div.main-container button {
 }
 
 div.container div.main-container input {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
   font-size: medium;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-div.container div.main-container input::-webkit-input-placeholder {
-  color: #3d82eb;
-}
-
-div.container div.main-container input:-ms-input-placeholder {
-  color: #3d82eb;
-}
-
-div.container div.main-container input::-ms-input-placeholder {
-  color: #3d82eb;
-}
-
-div.container div.main-container input::placeholder {
-  color: #3d82eb;
 }
 
 div.container div.main-container li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style-type: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: medium;
+  padding-left: 26px;
 }
 
 div.container div.main-container li:hover {
+  -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
   background-image: url(../assets/remove.svg);
   background-repeat: no-repeat;
   background-position: right;
-  -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
