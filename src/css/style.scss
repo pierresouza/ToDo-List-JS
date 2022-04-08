@@ -25,7 +25,6 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background: cyan;
 }
 
 div.container {
@@ -41,7 +40,6 @@ div.container {
       justify-content: space-between;
       padding: 16px;
       width: 80vw;
-
       div#logo {
         display: flex;
 
@@ -56,10 +54,13 @@ div.container {
         }
       }
 
-      div#filter-container {
-        select {
-          -webkit-appearance: none;
-          -moz-appearance: none;
+      select#filter-items {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        option {
+          cursor: pointer;
         }
       }
     }
@@ -69,58 +70,52 @@ div.container {
     margin-top: 16px;
     height: auto;
     padding: 24px;
-    div#input-container {
+    .todo-item {
       display: flex;
-      align-items: center;
-      padding: 8px;
-
-      input {
-        font-family: "Roboto", sans-serif;
-        padding-left: 16px;
-
-        &::placeholder {
-          font-family: "Roboto", sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          color: #3d82eb;
-        }
-      }
-    }
-    .todo__item {
-      display: flex;
-      width: 100%;
-      height: 60px;
+      height: auto;
       justify-content: space-between;
       align-items: center;
-      padding: 5px;
-      box-shadow: 1px 1px 5px #000;
+      padding: 8px;
+      margin-bottom: 24px;
+      &:hover {
+        cursor: pointer;
+        transition: all 0.5s;
+        transform: scale(1.1);
+        box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+      }
     }
-    .todo__item > div {
-      padding-left: 8px;
+    .todo-item > div {
       width: 80%;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
     }
-    .todo__item:hover {
+    .todo-item input[type="checkbox"] {
       cursor: pointer;
-      transition: all 0.5s ease;
-      background-color: #000;
-      color: #ffff00;
+      width: 16px;
+      height: 16px;
+      &:checked + div {
+        text-decoration: line-through;
+      }
     }
+  }
+  div#input-container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-top: 16px;
 
-    .todo__item > input[type="text"] {
-      border: none;
-      width: 80%;
-      font: inherit;
-    }
+    input {
+      font-family: "Roboto", sans-serif;
+      margin: 8px;
 
-    .todo__item > input[type="button"],
-    .todo__item > input[type="radio"] {
-      width: 20px;
-      height: 20px;
-      font: inherit;
-    }
-
-    .todo__item > input[type="radio"]:checked + div {
-      text-decoration: line-through;
+      &::placeholder {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #3d82eb;
+      }
     }
   }
 }

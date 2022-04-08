@@ -21,22 +21,24 @@
             <img src="assets/Calendar Icon.svg" alt="" />
             <h1>Today</h1>
           </div>
-          <div id="filter-container">
-            <select>
-              <option id="points">. . .</option>
-              <option>Completed</option>
-              <option>In Progress</option>
-              <option>Removed</option>
-            </select>
-          </div>
+          <select id="filter-items">
+            <option id="points">. . .</option>
+            <option>Completed</option>
+            <option>In Progress</option>
+            <option>Removed</option>
+          </select>
         </div>
-        <div class="list" id="todoList">
-          <div id="input-container">
-            <button onclick="adicionar()">
-              <img src="assets/plus.svg" alt="" />
-            </button>
-            <input type="text" id="newItem" placeholder="Create New Item" />
-          </div>
+        <div class="list" id="todoList"></div>
+        <div id="input-container">
+          <button>
+            <img src="assets/plus.svg" alt="" />
+          </button>
+          <input
+            type="text"
+            id="newItem"
+            size="50"
+            placeholder="Create New Item"
+          />
         </div>
       </div>
     </div>
