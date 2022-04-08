@@ -3,7 +3,7 @@ const setBanco = (banco) =>
   localStorage.setItem("todoList", JSON.stringify(banco));
 
 const criarItem = (tarefa, status, indice) => {
-  const item = document.createElement("div");
+  const item = document.createElement("label");
   item.classList.add("todo-item");
   item.innerHTML = `
       <input  type="checkbox"  ${status} data-indice = ${indice} >
@@ -12,10 +12,6 @@ const criarItem = (tarefa, status, indice) => {
   `;
   document.getElementById("todoList").appendChild(item);
 };
-
-// const filter = getBanco.filter(() => {
-//   if (filter === )
-// })
 
 const limparTarefas = () => {
   const todoList = document.getElementById("todoList");
@@ -29,7 +25,7 @@ const inserirItem = (evento) => {
   const texto = evento.target.value;
   if (tecla === "Enter") {
     const banco = getBanco();
-    banco.push({ tarefa: texto, status: "" });
+    banco.push({ 'tarefa': texto, 'status': "" });
     setBanco(banco);
     atualizarTela();
 
