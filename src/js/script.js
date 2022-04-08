@@ -1,9 +1,21 @@
-function adicionar() {
-  let text = document.getElementById("texto").value;
+const criarTarefa = (evento) => {
+  console.log(criarTarefa);
+  evento.preventDefault();
 
-  let list = document.getElementById("lista").innerHTML;
+  const lista = document.querySelector("#data-lista");
+  const input = document.querySelector("#data-input");
+  const valor = input.value;
 
-  list += "<li> " + text + "</li>";
+  const tarefa = document.createElement("li");
+  tarefa.classList.add("task");
+  const conteudo = <p class="content">${valor}</p>;
 
-  document.getElementById("lista").innerHTML = list;
-}
+  tarefa.innerHTML = conteudo;
+
+  tarefa.appendChild(BotaoConclui());
+  tarefa.appendChild(BotaoDeleta());
+  lista.appendChild(tarefa);
+  input.value = "";
+};
+
+//
