@@ -26,10 +26,6 @@ div.container {
   padding: 40px;
 }
 
-div.container div.main-container {
-  border: 2px solid green;
-}
-
 div.container div.main-container div.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
