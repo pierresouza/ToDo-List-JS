@@ -76,9 +76,12 @@ div.container div.main-container div.header-container div#logo h1 {
   border: 2px solid #0011ff;
 }
 
-div.container div.main-container div.header-container div#filter-container select {
+div.container div.main-container div.header-container div#filter-container .select-itens {
   -webkit-appearance: none;
   -moz-appearance: none;
+  border-radius: 5px 5px 0px 0px;
+  width: 20px;
+  border: 2px solid yellow;
 }
 
 div.container div.list {

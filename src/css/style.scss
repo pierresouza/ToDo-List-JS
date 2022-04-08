@@ -60,9 +60,12 @@ div.container {
       }
 
       div#filter-container {
-        select {
+        .select-itens {
           -webkit-appearance: none;
           -moz-appearance: none;
+          border-radius: 5px 5px 0px 0px;
+          width: 20px;
+          border: 2px solid yellow;
         }
       }
     }
