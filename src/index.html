@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <title>To Do List</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <div class="main-container">
-        <div class="header-container">
-          <div id="logo">
-            <img src="assets/Calendar Icon.svg" alt="" />
-            <h1>Today</h1>
-          </div>
-          <div id="filter-container">
-            <select id="funcao">
+        <div class="main-container">
+            <div class="header-container">
+                <div id="logo">
+                    <img src="assets/Calendar Icon.svg" alt="" />
+                    <h1>Today</h1>
+                </div>
+                <div id="filter-container">
+                    <select id="funcao">
               <option></option>
               <option>Completed</option>
               <option>In Progress</option>
               <option>Removed</option>
             </select>
-          </div>
+                </div>
+            </div>
+            <div class="task-list-area">
+                <ul>
+                    <li id="list-items">
+                        <input type="checkbox" name="chack" id="check">
+                        <p>sasdasdasdasdasdasdas</p>
+                        <button type="button" onclick="RemoveItem(id)">
+                    <img src="assets/remove.svg" alt="">
+                  </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="insert">
+                <button type="button" onclick="addNewItem()">
+                <img src="assets/plus.svg" alt="plus">
+              </button>
+                <input type="text" name="insert" id="insert" placeholder="Create New Item">
+            </div>
         </div>
-        <div class="list">
-          <div id="input-container">
-            <button onclick="adicionar()">
-              <img src="assets/plus.svg" alt="" />
-            </button>
-            <input type="text" id="texto" placeholder="Create New Item" />
-            <li id="lista"></li>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="js/script.js"></script>
-  </body>
+</body>
+
 </html>
