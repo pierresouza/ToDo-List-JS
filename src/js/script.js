@@ -1,48 +1,46 @@
-var todoList = [{
-    id: 1,
-    status: true,
-    description: "",
-}]
 
-function addNewItem() {
-    var inputValue = document.getElementById(`insert`)
-    console.log(`Adicionou`, inputValue.value)
+const todoInput = document.querySelector(".todo-input")
+const todoButton = document.querySelector(".todo-button")
+const todoList = document.querySelector(".todo-list")
 
-    var listItems = document.getElementById(`list-items`)
-    var li = document.createElement(`li`)
-    var input = document.createElement(`input`)
-    var text = document.createElement(`p`)
-    var button = document.createElement(`button`)
-    var img = document.createElement(`img`)
+//Event Listener
+todoButton.addEventListener("click", addTodo)
+todoList.addEventListener('click', deleteCheck)
 
+//Functions
 
-
-    input.setAttribute(`type`, `checkbox`)
-    button.appendChild(img)
-
-    text.innerHTML = inputValue
-    li.appendChild(input)
-    li.appendChild(text)
-    li.appendChild(button)
-
-    listItems.appendChild(li)
-
-    todoList.push({
-        id: Math.random(),
-        status: false,
-        description: insertInput.value
-    })
-
-    console.log(todoList)
-
-    insertInput.value = ''
-
+function addTodo(event) {
+  //Prevent form from submitting
+  event.preventDefault()
+  // Tod
+  const todoDiv = document.createElement('div')
+  todoDiv.classList.add("todo")
+  //CHECKED MARK BUTTON
+  const completedButton = document.createElement('button')
+  completedButton.innerHTML = '<input type="checkbox">'
+  completedButton.classList.add('completed-btn')
+  todoDiv.appendChild(completedButton)
+  //Create LI
+  const newTodo = document.createElement('li')
+  newTodo.innerText = todoInput.value
+  newTodo.classList.add('todo-item')
+  todoDiv.appendChild(newTodo)
+  //TRASH MARK BUTTON
+  const trashbutton = document.createElement('button')
+  trashbutton.innerHTML = '<img src="assets/remove.svg">'
+  trashbutton.classList.add('trash-btn')
+  todoDiv.appendChild(trashbutton)
+  // append to list
+  todoList.appendChild(todoDiv)
+  //Clear Todo input value
+  todoInput.value = "";
 }
 
-function RemoveItem(id) {
-    var newTodoList = todoList.filter(item => item.id != id)
-    console.log(`removeu`, id)
-
-
-
+function deleteCheck(e) {
+  const item = e.target;
+  // delete todo
+  if (item.classList[0] === "trash-btn") {
+    const todo = item.parentElement;
+    todo.remove()
+  }
 }

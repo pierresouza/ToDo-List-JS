@@ -1,78 +1,97 @@
 * {
-  margin: 0;
   padding: 0;
-  outline: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 0;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
   height: 100vh;
-}
-
-div.container {
+  width: 100vw;
+  background: #e5e5e5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  padding: 40px;
 }
 
-div.container div.main-container div.header-container {
+div#container {
+  height: 50vh;
+  width: 50vw;
+  padding: 24px;
+  background: white;
+  border-radius: 24px;
+}
+
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 16px;
-  width: 50vw;
+  padding-bottom: 24px;
 }
 
-div.container div.main-container div.header-container select {
-  border: 0;
-}
-
-div.container div.main-container div.header-container div#logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-div.container div.main-container div.header-container div#logo img {
+header img {
   padding-right: 16px;
 }
 
-div.container div.main-container div.header-container div#logo h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-}
-
-div.container div.main-container div.task-list-area {
+header .filter-todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-div.container div.main-container div.task-list-area > ul {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  padding-left: 24px;
 }
 
-div.container div.main-container div.task-list-area > ul > li {
+form button {
+  border: 0;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+div.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.todo-container .todo-list {
+  min-width: 30%;
+  width: 50vw;
+  list-style: none;
+}
+
+div.todo-container > ul > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,34 +103,81 @@ div.container div.main-container div.task-list-area > ul > li {
           justify-content: space-between;
 }
 
-div.container div.main-container div.task-list-area > ul > li button {
+div.todo-container > ul > li button {
   border: 0;
+  background: white;
   cursor: pointer;
 }
 
-div.container div.main-container div.insert input {
+.todo {
+  background: white;
+  color: black;
+  font-size: 16px;
+  width: 44vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.completed-btn {
   border: 0;
-}
-
-div.container div.main-container div.insert input::-webkit-input-placeholder {
-  color: #3D82EB;
-}
-
-div.container div.main-container div.insert input:-ms-input-placeholder {
-  color: #3D82EB;
-}
-
-div.container div.main-container div.insert input::-ms-input-placeholder {
-  color: #3D82EB;
-}
-
-div.container div.main-container div.insert input::placeholder {
-  color: #3D82EB;
-}
-
-div.container div.main-container div.insert button {
+  font-size: 20px;
+  background: white;
   cursor: pointer;
+}
+
+.trash-btn {
   border: 0;
-  margin-right: 16px;
+  font-size: 20px;
+  background: white;
+  cursor: pointer;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+}
+
+form button {
+  cursor: pointer;
+}
+
+form input {
+  border: 0;
+}
+
+form input::-webkit-input-placeholder {
+  color: #3d82eb;
+}
+
+form input:-ms-input-placeholder {
+  color: #3d82eb;
+}
+
+form input::-ms-input-placeholder {
+  color: #3d82eb;
+}
+
+form input::placeholder {
+  color: #3d82eb;
 }
 /*# sourceMappingURL=style.css.map */
