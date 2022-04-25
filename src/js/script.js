@@ -27,7 +27,7 @@ function addTodo(event) {
   todoDiv.appendChild(newTodo)
   //TRASH MARK BUTTON
   const trashbutton = document.createElement('button')
-  trashbutton.innerHTML = '<button<img src="assets/remove.svg"></button>'
+  trashbutton.innerHTML = '<button><img src="assets/remove.svg"></button>'
   trashbutton.classList.add('trash-btn')
   todoDiv.appendChild(trashbutton)
   // append to list
