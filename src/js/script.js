@@ -1,46 +1,43 @@
+const todoList = document.querySelector(".todo-list");
+// coletando botão de salvar um novo item
+const buttonNewItem = document.getElementById('button-new-item');
+//coletando a input text de novo item 
+const inputNewItem = document.getElementById('input-new-item');
 
-const todoInput = document.querySelector(".todo-input")
-const todoButton = document.querySelector(".todo-button")
-const todoList = document.querySelector(".todo-list")
-
-//Event Listener
-todoButton.addEventListener("click", addTodo)
-todoList.addEventListener('click', deleteCheck)
-
-//Functions
-
-function addTodo(event) {
-  //Prevent form from submitting
-  event.preventDefault()
-  // Tod
-  const todoDiv = document.createElement('div')
-  todoDiv.classList.add("todo")
-  //CHECKED MARK BUTTON
-  const completedButton = document.createElement('button')
-  completedButton.innerHTML = '<input type="checkbox">'
-  completedButton.classList.add('completed-btn')
-  todoDiv.appendChild(completedButton)
-  //Create LI
-  const newTodo = document.createElement('li')
-  newTodo.innerText = todoInput.value
-  newTodo.classList.add('todo-item')
-  todoDiv.appendChild(newTodo)
-  //TRASH MARK BUTTON
-  const trashbutton = document.createElement('button')
-  trashbutton.innerHTML = '<button><img src="assets/remove.svg"></button>'
-  trashbutton.classList.add('trash-btn')
-  todoDiv.appendChild(trashbutton)
-  // append to list
-  todoList.appendChild(todoDiv)
-  //Clear Todo input value
-  todoInput.value = "";
+//criar um novo item na todo
+function createItem(event) {
+  // JSON con valores de status e nome dos campos
+  const newItem = {
+    name: inputNewItem.value,
+    status: "progress"
+  };
+  // variável que armazena itens da todo 
+  const listItem = localStorage.getItem("itens");
+  //verificando se existem itens armazenados no localstorage
+  if(listItem != undefined){
+    // adicionando um novo item ao todo
+    listItem.push(newItem);
+    //atualizando os itens no localstorage
+    localStorage.setItem("itens",listItem);
+  }else{
+    //criando um array com os itens da todo no localstorage 
+    localStorage.setItem("itens",[newItem]); 
+  }
 }
 
-function deleteCheck(e) {
+function deleteItem(e) {
   const item = e.target;
   // delete todo
   if (item.classList[0] === "trash-btn") {
     const todo = item.parentElement;
-    todo.remove()
+    todo.remove();
   }
 }
+
+function loadItems(){
+  const listItens = localStorage.getItem("itens");
+  
+}
+//Event Listener
+todoButton.addEventListener("click", createItem)
+todoList.addEventListener('click', deleteItem)
