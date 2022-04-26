@@ -35,20 +35,6 @@ header {
     }
 }
 
-form {
-    display: flex;
-    width: 50vw;
-    padding-left: 24px;
-
-    button {
-        border: 0;
-        padding-right: 16px;
-        display: flex;
-        align-items: center;
-        background: white;
-    }
-}
-
 div.todo-container {
     display: flex;
     flex-direction: column;
@@ -64,12 +50,7 @@ div.todo-container {
         > li {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            // &:hover {
-            //     background: #ffffff;
-            //     box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
-            //     border-radius: 5px;
-            // }
+            justify-content: space-around;
             button {
                 border: 0;
                 background: white;
@@ -115,7 +96,13 @@ form {
     display: flex;
     width: 50vw;
     button {
+        padding-left: 24px;
         cursor: pointer;
+        border: 0;
+        padding-right: 16px;
+        display: flex;
+        align-items: center;
+        background: white;
     }
     input {
         border: 0;

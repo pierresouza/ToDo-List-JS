@@ -49,26 +49,6 @@ header .filter-todo {
   display: flex;
 }
 
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50vw;
-  padding-left: 24px;
-}
-
-form button {
-  border: 0;
-  padding-right: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: white;
-}
-
 div.todo-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,9 +78,8 @@ div.todo-container > ul > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 div.todo-container > ul > li button {
@@ -158,7 +137,17 @@ form {
 }
 
 form button {
+  padding-left: 24px;
   cursor: pointer;
+  border: 0;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
 }
 
 form input {
