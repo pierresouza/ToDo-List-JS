@@ -12,34 +12,25 @@
         <img src="assets/Calendar Icon.svg" alt="">
       <h1>Today</h1>
       <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="In Progress">In Progress</option>
+        <select name="todos" id="filter-todo" class="filter-todo">
           <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
+          <option value="progress">In Progress</option>
+          <option value="removed">Removed</option>
         </select>
       </header>
     <div class="todo-container">
-      <ul class="todo-list">
-            <li>
-                <input type="checkbox">
-                <div>teste</div>
-                <button>
-                    <img src="assets/remove.svg" alt="">
-                </button>
-            </li>
+      <ul id="todo-list-container" class="todo-list">
       </ul>
-    <form>
+    <div id="container-new-item">
         <button id="button-new-item" type="button">
           <img src="assets/plus.svg" alt="" />
         </button>
       <input type="text" id="input-new-item" placeholder="Create New Item" />
       </div>
-    </form>
+    <div>
     </div>
     </div>
 </div>
     <script src="js/script.js"></script>
   </body>
 </html>
-
-

@@ -115,28 +115,14 @@ div.todo-container > ul > li button {
   display: flex;
 }
 
-.completed-btn {
-  border: 0;
-  font-size: 20px;
-  background: white;
-  cursor: pointer;
-}
-
-.trash-btn {
-  border: 0;
-  font-size: 20px;
-  background: white;
-  cursor: pointer;
-}
-
-form {
+div#container-new-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 50vw;
 }
 
-form button {
+div#container-new-item button {
   padding-left: 24px;
   cursor: pointer;
   border: 0;
@@ -150,23 +136,23 @@ form button {
   background: white;
 }
 
-form input {
+div#container-new-item input {
   border: 0;
 }
 
-form input::-webkit-input-placeholder {
+div#container-new-item input::-webkit-input-placeholder {
   color: #3d82eb;
 }
 
-form input:-ms-input-placeholder {
+div#container-new-item input:-ms-input-placeholder {
   color: #3d82eb;
 }
 
-form input::-ms-input-placeholder {
+div#container-new-item input::-ms-input-placeholder {
   color: #3d82eb;
 }
 
-form input::placeholder {
+div#container-new-item input::placeholder {
   color: #3d82eb;
 }
 /*# sourceMappingURL=style.css.map */

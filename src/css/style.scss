@@ -1,114 +1,102 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    background: #e5e5e5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div#container {
-    height: 50vh;
-    width: 50vw;
-    padding: 24px;
-    background: white;
-    border-radius: 24px;
+  height: 50vh;
+  width: 50vw;
+  padding: 24px;
+  background: white;
+  border-radius: 24px;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    padding-bottom: 24px;
-    img {
-        padding-right: 16px;
-    }
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+  img {
+    padding-right: 16px;
+  }
 
-    .filter-todo {
-        display: flex;
-    }
+  .filter-todo {
+    display: flex;
+  }
 }
 
 div.todo-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .todo-list {
-        min-width: 30%;
-        width: 50vw;
-        list-style: none;
+  .todo-list {
+    min-width: 30%;
+    width: 50vw;
+    list-style: none;
+  }
+  > ul {
+    > li {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      button {
+        border: 0;
+        background: white;
+        cursor: pointer;
+      }
     }
-    > ul {
-        > li {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            button {
-                border: 0;
-                background: white;
-                cursor: pointer;
-            }
-        }
-    }
+  }
 }
 
 .todo {
-    background: white;
-    color: black;
-    font-size: 16px;
-    width: 44vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  background: white;
+  color: black;
+  font-size: 16px;
+  width: 44vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .todo li {
-    display: flex;
+  display: flex;
 }
 
 .todo-item {
-    display: flex;
+  display: flex;
 }
 
-.completed-btn {
-    border: 0;
-    font-size: 20px;
-    background: white;
+
+
+div#container-new-item {
+  display: flex;
+  width: 50vw;
+  button {
+    padding-left: 24px;
     cursor: pointer;
-}
-
-.trash-btn {
     border: 0;
-    font-size: 20px;
-    background: white;
-    cursor: pointer;
-}
-
-form {
+    padding-right: 16px;
     display: flex;
-    width: 50vw;
-    button {
-        padding-left: 24px;
-        cursor: pointer;
-        border: 0;
-        padding-right: 16px;
-        display: flex;
-        align-items: center;
-        background: white;
-    }
-    input {
-        border: 0;
+    align-items: center;
+    background: white;
+  }
+  input {
+    border: 0;
 
-        &::placeholder {
-            color: #3d82eb;
-        }
+    &::placeholder {
+      color: #3d82eb;
     }
+  }
 }
