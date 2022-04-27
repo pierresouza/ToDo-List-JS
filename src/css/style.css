@@ -24,7 +24,7 @@ body {
 div#container {
   height: 50vh;
   width: 50vw;
-  padding: 24px;
+  padding: 32px;
   background: white;
   border-radius: 24px;
 }
@@ -43,10 +43,37 @@ header img {
   padding-right: 16px;
 }
 
+header > h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header div.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 0;
+}
+
 header .filter-todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+  -webkit-appearance: none;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 8px 8px 0px 0px;
+  border: 0;
+  padding-right: 8px;
 }
 
 div.todo-container {
@@ -71,6 +98,17 @@ div.todo-container .todo-list {
   list-style: none;
 }
 
+div.todo-container > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 10px;
+}
+
 div.todo-container > ul > li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,8 +116,27 @@ div.todo-container > ul > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: 100%;
+  padding: 8px 32px;
+}
+
+div.todo-container > ul > li > input {
+  border: 1px solid green;
+}
+
+div.todo-container > ul > li:hover {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+div.todo-container > ul > li > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 16px;
+  font-weight: 400;
 }
 
 div.todo-container > ul > li button {
@@ -88,11 +145,16 @@ div.todo-container > ul > li button {
   cursor: pointer;
 }
 
+div.todo-container > ul > li button:hover {
+  -webkit-transform: scale(100px, 100px);
+          transform: scale(100px, 100px);
+}
+
 .todo {
   background: white;
   color: black;
   font-size: 16px;
-  width: 44vw;
+  width: 40vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,11 +181,11 @@ div#container-new-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50vw;
+  width: 100%;
+  padding: 8px 8px;
 }
 
 div#container-new-item button {
-  padding-left: 24px;
   cursor: pointer;
   border: 0;
   padding-right: 16px;
@@ -154,5 +216,9 @@ div#container-new-item input::-ms-input-placeholder {
 
 div#container-new-item input::placeholder {
   color: #3d82eb;
+}
+
+#dots {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
