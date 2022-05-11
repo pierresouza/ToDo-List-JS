@@ -8,7 +8,7 @@ const ulTodolist = document.getElementById('todo-list-container');
 
 const filterTodo = document.getElementById('filter-todo');
 
-// Funcao que atribui um status de deletado a um item da TODO
+// Funcao que atribui um status de checado a um item da TODO
 function checkItem(index) {
   // Coletando todos os itens do localStorage
   let listItens = localStorage.getItem("itens");
